@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    
+    margin: 0%;
+    padding: 0%;
+    font-family: "Poppins", serif;
+    background: white;
+
+}
+
+.container{
+
+    width: 95%;
+    padding: 0% 5% 1% 0%;
+    display: flex;
+	
+    
+}
+
+
+
+.dashboard{
+    width: 80%;
+    margin-left: 110px;
+    padding: 20px;
+	margin-top:90px;
+
+ }
+
+.dashboardRow{
+    width: 100%;
+    /* background-color: aliceblue; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+
+} 
+
+.dashboardcol{
+    width: 47%;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 8px rgb(6, 8, 143),1px 1px 8px rgb(67, 145, 247);
+
+    background: linear-gradient(to right, #011a53, rgb(18, 52, 145), rgb(64, 105, 218), rgb(77, 125, 236)); 
+
+    background-color: #3f3f3f3a;
+
+}
+
+.divHedding{
+    color: #82ccf9;
+    letter-spacing: 1px;
+    
+}
+
+.divHedding span{
+    color:#82ccf9;
+    font-size: 22px;
+    
+}
+
+
+.empname{
+    color:#f15e2d ;
+}
+
+hr{
+    width: 60%;
+    float: right;
+}
+
+.empInfo{
+   
+    width: 100%;
+    color: #dfdfdf;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.profilePicture{
+    width: 50px;
+    height: 50px;
+    background-image: url(images.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    border-radius: 75px;
+    float: left;
+    box-shadow: inset 1px 1px 5px rgb(72, 190, 245),1px 1px 8px rgb(15, 135, 182)
+    
+}
+
+.employeeInfo{
+    color: rgb(219, 219, 219);
+}
+
+.bioInfo{
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: -3px;
+}
+
+.editBTN{
+    width: 100px;
+    height: 24px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: #f15e2d;
+    text-align: right;
+    
+    
+}
+
+
+
+.skillBar{
+    width:94%;
+    height: 200px;
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill{
+    width: 160px;
+    height: 160px;
+    /* background-color: cornflowerblue; */
+    position: relative;
+    margin-left: 20px;
+}
+
+.outer{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: solid 1px rgba(255, 255, 255, 0);
+    box-shadow: 3px 3px 8px -1px rgba(151, 150, 150, 0.15),-6px -6px 10px -1px rgba(202, 202, 202, 0.7);
+    
+}
+
+.inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: solid 1px rgba(255, 0, 0, 0);
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+     inset -4px -4px 6px -1px rgba(116, 115, 115, 0.7),
+    -0.5px -0.5px 0px rgb(192, 180, 180),
+    0.5px 0.5px 0px rgba(221, 205, 205, 0.15),
+    0px 12px 10px -10px rgba(226, 176, 176, 0.05);
+    
+    
+}
+
+.number{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #82ccf9;
+
+}
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+
+    animation: anim 2s linear forwards;
+}
+
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 160;
+    }
+
+}
+
+
+@keyframes anim2{
+    100%{
+        stroke-dashoffset: 180;
+    }
+
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    color: #d0e670;
+  }
+  
+  thead th {
+    color: #eeeeee;
+    font-weight: bold;
+    font-size: 14px;
+ 
+  }
+
+.teamdiv{
+    margin-top: 50px;
+    color: #d0e670;
+    margin-right: 30px;
+}
+
+.teamdiv h3{
+    margin-top: 50px;
+    color: #f15e2d;
+    
+}
+
+
+.servicediv{
+    margin-top: 50px;
+}
+
+.ServiceInfo{
+    text-align: right;
+}
+
+.ServiceInfo{
+    color: #f15e2d;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+/* --------meadia Quary------------------------------------- */
+@media (max-width:1696px) {
+
+.dashboard{
+    width: 80%;
+    margin-left: 160px;
+    padding: 20px;
+	margin-top:90px;
+}
+ }
+ @media (max-width:1200px) {
+
+.dashboard{
+    width: 80%;
+    margin-left: 130px;
+    padding: 20px;
+	margin-top:90px;
+}
+ }
+
+@media (max-width:768px) {
+    .container{
+        width: 100%;
+        padding: 0% 0% 0% 0%;
+        display: contents;
+        
+    }
+
+    
+    
+  
+    
+    .dashboard{
+        width: 100%;
+        height: 100vh;
+        margin-left: 0px;
+        padding: 0px;
+    
+     }
+    
+    .dashboardRow{
+        width: 96%;
+    
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content:center ;
+        display: block;
+        
+    
+    } 
+
+    .dashboardcol{
+        width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:20px;
+       
+    }
+
+
+    
+
+ .footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+	  margin-top:1100px;
+    }
+
+   
+}
+
+@media (max-width:430px) {
+    
+	 .footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+	  margin-bottom:10px;
+    }
+	
+}
+@media (max-width:350px) {
+.dashboardcol{
+    width: 355px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 8px rgb(6, 8, 143),1px 1px 8px rgb(67, 145, 247);
+
+    background: linear-gradient(to right, #011a53, rgb(18, 52, 145), rgb(64, 105, 218), rgb(77, 125, 236)); 
+
+    background-color: #3f3f3f3a;
+
+}
+.welcome {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+          
+            padding: 20px;
+         
+            color: #2c3e50;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 500px;
+        }
+
+    
+	 .footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+	  margin-bottom:10px;
+    }
+	
+}
+/* Header Styles */
+    .header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header .menu-btn {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+	
+	  /* Footer Styles */
+    .footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+	  margin-bottom:10px;
+    }
+	.welcome {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+          
+            padding: 10px;
+         
+            color: #2c3e50;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        .welcome img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid  #2c3e50;
+        }
+
+        .welcome-details {
+            text-align: left;
+        }
+
+        .welcome-details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-details p {
+            font-size: 16px;
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        
+ <!-- Header -->
+    <div class="header">
+  Employee Panel
+      <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    </div>
+ 
+
+        <div class="dashboard">
+		<section class="welcome">
+	
+        <img src="image2.jpeg" alt="Profile Picture">
+        <div class="welcome-details">
+             <h2>Welcome, CPLM </h2>
+            <p>Employer</p>
+            <p>ID Number: 000000010</p>
+        </div>
+		</section>
+
+            <div class="dashboardRow">
+
+                <div class="dashboardcol">
+
+                    <h3 class="divHedding"><span>P</span>rofile</h3><hr>
+                    <div class="empInfo">
+                        <div class="images.jpeg">
+                        </div>
+                        <div class="employeeInfo">
+                            <h2 class="empname">CPLM Karunathilake</h2>
+                            <p class="bioInfo">ID-00000010</p>
+                            <p class="bioInfo">karunathilake@gmail.com</p>
+                            <p class="bioInfo">+94779998866</p>
+
+                            <button class="editBTN">EDIT</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dashboardcol">
+                    <h3 class="divHedding"><span>A</span>ttendance</h3><hr>
+
+                    <div class="skillBar">
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <div id="number" class="number">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <svg xmlns="http//www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="0%" stop-color="#673ab7" />
+
+
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="80" cy="80" r="70" stroke-linecap="round"/>
+                                
+
+                            </svg>
+
+                        </div>
+
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <div id="number2" class="number">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <svg xmlns="http//www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="0%" stop-color="#673ab7" />
+                                        
+
+
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="80" cy="80" r="70" stroke-linecap="round"/>
+                                
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="dashboardRow">
+
+                <div class="dashboardcol">
+
+                    <h3 class="divHedding"><span>P</span>ayroll info</h3><hr>
+                        <table>
+                            <thead>
+                              <tr>
+                                <th>Year/Month</th>
+                                <th>Basic Salary</th>
+                                <th>Over Time</th>
+                                <th>Total Salary</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>2025/Jan</td>
+                                <td>Pending...</td>
+                                <td>Pending...</td>
+                                <td>Pending...</td>
+                              </tr>
+                              <tr>
+                                <td>2024/Dec</td>
+                                <td>Rs35 000.00</td>
+                                <td>Rs5 500.00</td>
+                                <td>Rs40 500.00</td>
+                              </tr>
+                              <tr>
+                                <td>2024/Nov</td>
+                                <td>Rs35 000.00</td>
+                                <td>Rs7 000.00</td>
+                                <td>Rs42 000.00</td>
+                              </tr>
+                              <tr>
+                                <td>2024/Oct</td>
+                                <td>Rs35 000.00</td>
+                                <td>Rs5 000.00</td>
+                                <td>Rs40 000.00</td>
+                              </tr>
+                              <tr>
+                                <td>2024/Sep</td>
+                                <td>Rs35 000.00</td>
+                                <td>Rs8 000.00</td>
+                                <td>Rs43 000.00</td>
+                              </tr>
+                              <tr>
+                                <td>2024/Aug</td>
+                                <td>Rs35 000.00</td>
+                                <td>Rs9 000.00</td>
+                                <td>Rs44 000.00</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                </div>
+                <div class="dashboardcol">
+                    <h3 class="divHedding"><span>T</span>eam name</h3><hr>
+                        <div >
+                            <h3>Team members</h2>
+                            <p>CPLM Karunathilake</p>
+                            <p>CPLM Karunathilake</p>
+                            <p>CPLM Karunathilake</p>
+                            <p>CPLM Karunathilake</p>
+                        </div>
+                </div>
+                
+            </div>
+
+           
+        </div>
+		
+
+    </div>
+	 <div class="footer">
+      HRM System | Manager Panel | © 2024
+    </div>
+
+
+    <script src="employee.js"></script>
+    
+</body>
+</html>
